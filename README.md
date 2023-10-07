@@ -6,7 +6,7 @@
 
 ## 1. Introduction
 
-In today's modern web development landscape, understanding how backend and frontend technologies can come together in an integrated environment is essential. In this article, we'll explore an application that uses PHP for backend language, JavaScript on the frontend, and Docker Compose to orchestrate the development environment.
+In today's modern web development landscape, understanding how backend and frontend technologies can come together in an integrated environment is essential. In this code, we'll explore an application that uses PHP for backend language, JavaScript on the frontend, and Docker Compose to orchestrate the development environment.
 
 ## 2. Backend: PHP
 
@@ -36,11 +36,15 @@ These containers are interconnected, allowing the PHP application to communicate
 
 ![intro](https://i.imgur.com/6UIiMLv.png)
 
-# How to install
+# Setting Up and Running the Application with Docker and MySQL
 
-1. Deploy docker container with **docker compose up**
-2. Crear table in MySQL using **Admainer** in port 8081
-3. Exec the next SQL code:
+0. Open a terminal in the project folder.
+1. Run the command: `docker-compose build`
+2. Deploy the container using: `docker-compose up`
+3. Open a new terminal tab.
+4. Access **Adminer** by visiting [http://localhost:8081](http://localhost:8081).
+5. Use the credentials provided in the `.env` file to log in.
+5. Create a MySQL Table:
 ```
 CREATE TABLE `audax_terms` (
   `id` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -48,6 +52,11 @@ CREATE TABLE `audax_terms` (
   `created_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE='InnoDB';
 ```
-4. Go to http://localhost:8080
-5. Click en search
-6. Look up for term
+6. Navigate to [http://localhost:8080](http://localhost:8080) in your web browser.
+7. Click on the 'search' link or button to utilize the search functionality (http://localhost:8080/search).
+
+# How to Read the Source Code
+
+1. The **src** folder is set as a volume in the Docker container, mapped to **/var/www/html**.
+2. Inside the **src** folder, you will find: The **public** folder which serves as the main entry point for the application. The main file named **index.php**. This is where the application's core functionalities, including API endpoints and database connections, are defined.
+3. The file autocomplete.js is a JavaScript script responsible for: Consuming the API endpoints defined in index.php. Providing autocomplete functionalities for the application.
