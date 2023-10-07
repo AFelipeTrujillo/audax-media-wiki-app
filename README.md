@@ -10,7 +10,7 @@ In today's modern web development landscape, understanding how backend and front
 
 ## 2. Backend: PHP
 
-PHP is a widely-used server-side programming language. In our application:
+PHP is a widely-used server-side programming language. In my application:
 
 - **Slim Framework** is employed to handle routing and HTTP responses.
 - **Twig** is used as a templating engine to render views.
