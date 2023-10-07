@@ -35,3 +35,19 @@ To ensure cohesive development and deployment, Docker Compose is used:
 These containers are interconnected, allowing the PHP application to communicate with the MySQL database. Docker Compose configuration also maps ports and volumes, facilitating development and data persistence.
 
 ![intro](https://i.imgur.com/6UIiMLv.png)
+
+# How to install
+
+1. Deploy docker container with **docker compose up**
+2. Crear table in MySQL using **Admainer** in port 8081
+3. Exec the next SQL code:
+```
+CREATE TABLE `audax_terms` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `term` varchar(150) NOT NULL UNIQUE,
+  `created_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE='InnoDB';
+```
+4. Go to http://localhost:8080
+5. Click en search
+6. Look up for term
