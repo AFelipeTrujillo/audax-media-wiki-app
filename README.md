@@ -44,7 +44,7 @@ These containers are interconnected, allowing the PHP application to communicate
 3. Open a new terminal tab.
 4. Access **Adminer** by visiting [http://localhost:8081](http://localhost:8081).
 5. Use the credentials provided in the `.env` file to log in.
-5. Create a MySQL Table:
+6. Create a MySQL Table:
 ```
 CREATE TABLE `audax_terms` (
   `id` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -52,11 +52,11 @@ CREATE TABLE `audax_terms` (
   `created_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE='InnoDB';
 ```
-6. Navigate to [http://localhost:8080](http://localhost:8080) in your web browser.
-7. Click on the 'search' link or button to utilize the search functionality (http://localhost:8080/search).
+7. Navigate to [http://localhost:8080](http://localhost:8080) in your web browser.
+8. Click on the 'search' link or button to utilize the search functionality (http://localhost:8080/search).
 
 # How to Read the Source Code
 
 1. The **src** folder is set as a volume in the Docker container, mapped to **/var/www/html**.
-2. Inside the **src** folder, you will find: The **public** folder which serves as the main entry point for the application. The main file named **index.php**. This is where the application's core functionalities, including API endpoints and database connections, are defined.
-3. The file autocomplete.js is a JavaScript script responsible for: Consuming the API endpoints defined in index.php. Providing autocomplete functionalities for the application.
+2. Inside the **src** folder, you will find: The **public** folder which serves as the main entry point for the application. The main file named **index.php** ([go to file](https://github.com/AFelipeTrujillo/audax-media-wiki-app/blob/main/src/public/index.php)). This is where the application's core functionalities, including API endpoints and database connections, are defined.
+3. The file autocomplete.js is a JavaScript script responsible for: Consuming the API endpoints defined in **index.php**. Providing autocomplete functionalities for the application.
