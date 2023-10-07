@@ -59,4 +59,4 @@ CREATE TABLE `audax_terms` (
 
 1. The **src** folder is set as a volume in the Docker container, mapped to **/var/www/html**.
 2. Inside the **src** folder, you will find: The **public** folder which serves as the main entry point for the application. The main file named **index.php** ([go to file](https://github.com/AFelipeTrujillo/audax-media-wiki-app/blob/main/src/public/index.php)). This is where the application's core functionalities, including API endpoints and database connections, are defined.
-3. The file autocomplete.js is a JavaScript script responsible for: Consuming the API endpoints defined in **index.php**. Providing autocomplete functionalities for the application.
+3. The file **autocomplete.js** ([go to file](https://github.com/AFelipeTrujillo/audax-media-wiki-app/blob/main/src/public/autocomplete.js)) is a JavaScript script responsible for: Consuming the API endpoints defined in **index.php**. Providing autocomplete functionalities for the application.
