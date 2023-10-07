@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="starter-template">
+        <h1>Hi! 👋</h1>
+        <p class="lead"><b>WikiMediaApp</b> is an application developed in PHP using the <b>Slim</b> framework. Its primary purpose is to allow users to search for terms via the MediaWiki API, displaying the results in real-time. Furthermore, it features the ability to store users' search history in a <b>MySQL</b> database. To provide an optimized user experience and an appealing design, we integrated <b>Bootstrap</b> and <b>Twig</b> into the presentation layer.</p>
+        <a href="{{url_for('search')}}" type="button" class="btn btn-primary btn-lg">Search Now!</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  php:
+    container_name: php-slim
+    build: .
+    volumes:
+      - ./src:/var/www/html/
+      - ./apache:/etc/apache2/sites-available/
+    ports:
+      - 8080:80
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD} 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./mysql:/var/lib/mysql
+  adminer:
+    image: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - 8081:8080
