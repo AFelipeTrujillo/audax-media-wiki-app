@@ -42,9 +42,10 @@ These containers are interconnected, allowing the PHP application to communicate
 1. Run the command: `docker-compose build`
 2. Deploy the container using: `docker-compose up`
 3. Open a new terminal tab.
-4. Access **Adminer** by visiting [http://localhost:8081](http://localhost:8081).
-5. Use the credentials provided in the `.env` file to log in.
-6. Create a MySQL Table:
+4. Run the command and install dependecies: `docker compose run php composer install`
+5. Access **Adminer** by visiting [http://localhost:8081](http://localhost:8081).
+6. Use the credentials provided in the `.env` file to log in.
+7. Create a MySQL Table:
 ```
 CREATE TABLE `audax_terms` (
   `id` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -52,8 +53,8 @@ CREATE TABLE `audax_terms` (
   `created_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE='InnoDB';
 ```
-7. Navigate to [http://localhost:8080](http://localhost:8080) in your web browser.
-8. Click on the 'search' link or button to utilize the search functionality (http://localhost:8080/search).
+8. Navigate to [http://localhost:8080](http://localhost:8080) in your web browser.
+9. Click on the 'search' link or button to utilize the search functionality (http://localhost:8080/search).
 
 # How to Read the Source Code
 
