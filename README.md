@@ -34,6 +34,4 @@ To ensure cohesive development and deployment, Docker Compose is used:
 
 These containers are interconnected, allowing the PHP application to communicate with the MySQL database. Docker Compose configuration also maps ports and volumes, facilitating development and data persistence.
 
-## 5. Conclusion
-
-By integrating PHP, JavaScript, and Docker Compose, we can create robust and scalable web applications. The use of Docker Compose, in particular, eases the setup, development, and deployment, ensuring the application functions consistently across different environments.
+![intro](https://i.imgur.com/6UIiMLv.png)
