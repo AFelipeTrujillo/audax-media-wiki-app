@@ -12,7 +12,7 @@ In today's modern web development landscape, understanding how backend and front
 
 PHP is a widely-used server-side programming language. In my application:
 
-- **Slim Framework** is employed to handle routing and HTTP responses.
+- **Slim Framework** ([go to main page](https://www.slimframework.com/)) is employed to handle routing and HTTP responses.
 - **Twig** is used as a templating engine to render views.
 - The application connects to a MySQL database using PDO.
 - Routes are provided to display pages, search an external API, and store selected terms in a database.
